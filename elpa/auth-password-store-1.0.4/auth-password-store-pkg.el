@@ -1,0 +1,1 @@
+(define-package "auth-password-store" "1.0.4" "Integrate auth-source with password-store" '((emacs "24.4") (password-store "0.1") (seq "1.9") (cl-lib "0.5")) :keywords '("pass" "password-store" "auth-source" "username" "password" "login"))
