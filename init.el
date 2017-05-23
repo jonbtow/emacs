@@ -8,7 +8,7 @@
 
 
 ;-------------------------------------------------------------------------- 
-; Require Melpa and other packages
+; REQUIRE MELPA et al
 ;
 (package-initialize) 
 (require 'package)
@@ -29,12 +29,13 @@
 
 
 ;--------------------------------------------------------------------------
-; Ensure Package
+; USE-PACKAGE
 ;
 (package-install 'use-package)
 (require 'use-package)
 (setq use-package-always-ensure t)
 ;-------------------------------------------------------------------------- 
+
 
 ;-------------------------------------------------------------------------- 
 ; ELISP paths
@@ -46,15 +47,15 @@
 
 
 ;-------------------------------------------------------------------------- 
-; Personal Information 
+; PERSONAL INFORMATION
 (setf user-full-name "Jonathan Tow")
 (setf user-mail-address "jonathantow8@gmail.com")				;--------------------------------------------------------------------------
-
 
 
 ;; ensure environment variables inside Emacs look the same as in my shell
 ;(when (memq window-system '(mac ns))
 ;  (exec-path-from-shell-initialize))
+
 
 (provide 'init)
 ;;; init.el ends here

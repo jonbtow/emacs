@@ -2,20 +2,22 @@
 ; Jonathan Tow
 ; jonathantow8@gmail.com
 ;
-
+;;; Code:
 
 ;--------------------------------------------------------------------------
 ; IDO-MODE
 ;
-(require 'ido)
-(ido-mode 1)
-(ido-everywhere 1)
+(use-package ido
+  :ensure t
+  :config
+  (ido-mode 1)
+  (ido-everywhere 1))
 ;--------------------------------------------------------------------------
 
 
 ;--------------------------------------------------------------------------
 ; LINE NUMBER
-;					
+;
 (global-linum-mode 1)
 (global-visual-line-mode 1)
 ;--------------------------------------------------------------------------
@@ -24,29 +26,31 @@
 ;--------------------------------------------------------------------------
 ; UNDO-TREE
 ;
-(add-to-list 'load-path "~/.emacs.d/plugins/undo-tree")
-(require 'undo-tree)
-; turn on everywhere
-(global-undo-tree-mode)
-; make ctrl-z undo
-(global-set-key (kbd "C-z") 'undo)
-; make ctrl-Z redo
-(defalias 'redo 'undo-tree-redo)
-(global-set-key (kbd "C-S-z") 'redo)
+(use-package undo-tree
+  :ensure t
+  :init
+  (global-set-key (kbd "C-z") 'undo)
+  (defalias 'redo 'undo-tree-redo)
+  (global-set-key (kbd "C-S-z") 'redo)
+  :config
+  (global-undo-tree-mode))
 ;--------------------------------------------------------------------------
 
 
 ;--------------------------------------------------------------------------
 ; SPEEDBAR SETUP 
 ;
-(add-to-list 'load-path "~/.emacs.d/plugins/srspeedbar")
-(require 'sr-speedbar)
-(setq 
+(use-package sr-speedbar
+  :ensure t
+  :init
+  (setq
+   speedbar-show-unknown-files t        ; Show all files
    sr-speedbar-right-side nil
    sr-speedbar-width 25
    sr-speedbar-width-console 7
    sr-speedbar-max-width 25)
-(sr-speedbar-open)
+  :config
+  (sr-speedbar-open))
 ;--------------------------------------------------------------------------
 
 
@@ -65,11 +69,12 @@
 
 
 ;--------------------------------------------------------------------------
-; AUTO-PAIR
+; AUTOPAIR
 ;
-(add-to-list 'load-path "~/.emacs.d/plugins/autopair")
-(require 'autopair)
-(autopair-global-mode 1)
+(use-package autopair 
+  :ensure t
+  :config
+  (autopair-global-mode 1))
 ;--------------------------------------------------------------------------
 
 
@@ -339,7 +344,7 @@ rwin11/4.2.1/include"))
        " * Features that might be required by this lirbary: " \n
        " * " \n       
        " *               : None"\n
-       " * "\n
+       " * " \n
        " * " \n
        " * Commentary    : "\n
        " * " \n
