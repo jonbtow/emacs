@@ -46,8 +46,8 @@
   (setq
    speedbar-show-unknown-files t        ; Show all files
    sr-speedbar-right-side nil
-   sr-speedbar-width 25
-   sr-speedbar-width-console 7
+   sr-speedbar-width 22
+   sr-speedbar-width-console 5
    sr-speedbar-max-width 25)
   :config
   (sr-speedbar-open))
@@ -155,51 +155,51 @@
 ;--------------------------------------------------------------------------
 ; ORG MODE SPICES
 ;
-(eval-after-load "org"
-  '(progn
-     ;; Change .pdf association directly within the alist
-     (setcdr (assoc "\\.pdf\\'" org-file-apps) "skim %s")))
-(add-to-list 'load-path "~/.emacs.d/plugins/org/")
-(require 'ob-scheme)
-; use bullets instead of asteriks.
-(require 'org-bullets)
-; set preview latex to have a bigger font
-(set-default 'preview-scale-function 1.2)
-; change org stars to bullets
-(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
-(require 'ox-latex)
-; indent mode on
-(org-indent-mode 1)
+;; (eval-after-load "org"
+;;   '(progn
+;;      ;; Change .pdf association directly within the alist
+;;      (setcdr (assoc "\\.pdf\\'" org-file-apps) "skim %s")))
+;; (add-to-list 'load-path "~/.emacs.d/plugins/org/")
+;; (require 'ob-scheme)
+;; ; use bullets instead of asteriks.
+;; (require 'org-bullets)
+;; ; set preview latex to have a bigger font
+;; (set-default 'preview-scale-function 1.2)
+;; ; change org stars to bullets
+;; (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+;; (require 'ox-latex)
+;; ; indent mode on
+;; (org-indent-mode 1)
 
-(unless (boundp 'org-latex-classes)
-  (setq org-latex-classes nil))
-(setq org-export-with-section-numbers nil)
-(setq org-latex-to-pdf-process (list "latexmk %f"))
-; make formulas bigger in latex previews
-(setq org-format-latex-options (plist-put org-format-latex-options :scale 1.2))
-(defun do-org-show-all-inline-images ()
-  (interactive)
-  (org-display-inline-images t t))
-(global-set-key (kbd "C-c C-x C v")
-                'do-org-show-all-inline-images)
-(let* ((variable-tuple
-	(cond ((x-list-fonts "Source Sans Pro") '(:font "Source Sans Pro"))
-	      ((x-list-fonts "Lucida Grande")   '(:font "Lucida Grande"))
-	      ((x-list-fonts "Verdana")         '(:font "Verdana"))
-	      ((x-family-fonts "Sans Serif")    '(:family "Sans Serif"))
-	      (nil (warn "Cannot find a Sans Serif Font.  Install Source Sans Pro."))))
-       (base-font-color     (face-foreground 'default nil 'default))
-       (headline           `(:inherit default :weight bold :foreground ,base-font-color)))
-  (custom-theme-set-faces 'user
-                          `(org-level-8 ((t (,@headline ,@variable-tuple))))
-                          `(org-level-7 ((t (,@headline ,@variable-tuple))))
-                          `(org-level-6 ((t (,@headline ,@variable-tuple))))
-                          `(org-level-5 ((t (,@headline ,@variable-tuple))))
-                          `(org-level-4 ((t (,@headline ,@variable-tuple :height 1.1))))
-                          `(org-level-3 ((t (,@headline ,@variable-tuple :height 1.25))))
-                          `(org-level-2 ((t (,@headline ,@variable-tuple :height 1.5))))
-                          `(org-level-1 ((t (,@headline ,@variable-tuple :height 1.75))))
-                          `(org-document-title ((t (,@headline ,@variable-tuple :height 1.5 :underline nil))))))
+;; (unless (boundp 'org-latex-classes)
+;;   (setq org-latex-classes nil))
+;; (setq org-export-with-section-numbers nil)
+;; (setq org-latex-to-pdf-process (list "latexmk %f"))
+;; ; make formulas bigger in latex previews
+;; (setq org-format-latex-options (plist-put org-format-latex-options :scale 1.2))
+;; (defun do-org-show-all-inline-images ()
+;;   (interactive)
+;;   (org-display-inline-images t t))
+;; (global-set-key (kbd "C-c C-x C v")
+;;                 'do-org-show-all-inline-images)
+;; (let* ((variable-tuple
+;; 	(cond ((x-list-fonts "Source Sans Pro") '(:font "Source Sans Pro"))
+;; 	      ((x-list-fonts "Lucida Grande")   '(:font "Lucida Grande"))
+;; 	      ((x-list-fonts "Verdana")         '(:font "Verdana"))
+;; 	      ((x-family-fonts "Sans Serif")    '(:family "Sans Serif"))
+;; 	      (nil (warn "Cannot find a Sans Serif Font.  Install Source Sans Pro."))))
+;;        (base-font-color     (face-foreground 'default nil 'default))
+;;        (headline           `(:inherit default :weight bold :foreground ,base-font-color)))
+;;   (custom-theme-set-faces 'user
+;;                           `(org-level-8 ((t (,@headline ,@variable-tuple))))
+;;                           `(org-level-7 ((t (,@headline ,@variable-tuple))))
+;;                           `(org-level-6 ((t (,@headline ,@variable-tuple))))
+;;                           `(org-level-5 ((t (,@headline ,@variable-tuple))))
+;;                           `(org-level-4 ((t (,@headline ,@variable-tuple :height 1.1))))
+;;                           `(org-level-3 ((t (,@headline ,@variable-tuple :height 1.25))))
+;;                           `(org-level-2 ((t (,@headline ,@variable-tuple :height 1.5))))
+;;                           `(org-level-1 ((t (,@headline ,@variable-tuple :height 1.75))))
+;;                           `(org-document-title ((t (,@headline ,@variable-tuple :height 1.5 :underline nil))))))
 ;  babel set up for languages
 ;(org-babel-do-load-languages
 ; 'org-babel-load-languages
@@ -226,13 +226,17 @@
 ;--------------------------------------------------------------------------
 ; PYTHON IDE SETUP               
 ;
-(setq ipython-command "/Users/drseuss/anaconda/bin/ipython3")
-; Python mode: Best python mode for emacs.
-(package-initialize)
-(elpy-enable)
-(setq elpy-rpc-python-command "/Users/drseuss/anaconda/bin/python3")
-(elpy-use-ipython "~/anaconda/bin/ipython3")
-(elpy-use-cpython "~/anaconda/bin/ipython3")					
+(use-package elpy
+  :ensure t
+  :init
+;  (setq ipython-command "/Users/drseuss/anaconda/bin/ipython3")
+;  (setq elpy-rpc-python-command "/Users/drseuss/anaconda/bin/python3")
+;  (elpy-use-ipython "~/anaconda/bin/ipython3")
+;  (elpy-use-cpython "~/anaconda/bin/ipython3")
+  :config
+  (package-initialize)
+  (elpy-enable)
+  )
 ;--------------------------------------------------------------------------
 
 
@@ -240,12 +244,11 @@
 ; AUTO-COMPLETION 
 ;
 ; start auto-complete with emacs
-(require 'auto-complete)
-; do default config for auto-complete
-(require 'auto-complete-config)
-(ac-config-default)
+(use-package auto-complete
+  :ensure t
+  :config
+  (ac-config-default))
 ;--------------------------------------------------------------------------
-
 
 ;--------------------------------------------------------------------------
 ; YASNIPPET 

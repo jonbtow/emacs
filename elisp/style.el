@@ -11,8 +11,7 @@
 ; highlight the current line
 (global-hl-line-mode t)
 (setq highlight-current-line-globally t)
-(set-face-background 'hl-line "#3e4446")
-(set-face-foreground 'highlight nil)
+(set-face-background 'hl-line "#feffe8")
 (setq highlight-current-line-high-faces nil)
 (setq highlight-current-line-whole-line nil)
 ;--------------------------------------------------------------------------
@@ -22,13 +21,7 @@
 ; CUSTOM-SET-FACES
 ;
 (custom-set-faces
- '(font-lock-variable-name-face ((t (:foreground "#ffffff" ))))
- '(font-lock-comment-face ((t (:foreground "wheat4"))))
- '(font-lock-constant-face ((t (:foreground "deep pink"))))
- '(font-lock-keyword-face ((t (:foreground "maroon1"))))
- '(font-lock-preprocessor-face ((t (:inherit maroon1 :foreground "maroon1"))))
- '(font-lock-string-face ((t (:foreground "khaki1"))))
- '(font-lock-type-face ((t (:slant italic))))
+ '(font-lock-string-face ((t (:foreground "#1e9e1e"))))
  '(scroll-bar ((t (:background "dim gray")))))					
 ;--------------------------------------------------------------------------
 
@@ -36,7 +29,7 @@
 ;--------------------------------------------------------------------------
 ; INITIAL FRAME LOCATION
 ;
-(setq initial-frame-alist `((left . 400))) 
+(setq initial-frame-alist `((left . 250))) 
 (setq default-frame-alist (copy-alist initial-frame-alist))
 ;--------------------------------------------------------------------------
 
@@ -66,19 +59,19 @@
 
 
 ;--------------------------------------------------------------------------
-; SCREEN HEIGHT
+; SCREEN HEIGHT & WIDTH
 ;
-(add-to-list 'default-frame-alist
-	     '(height . 59))     ;nice size default frame height.
+(add-to-list 'default-frame-alist  '(height . 59))
+(add-to-list 'default-frame-alist  '(width . 120))
 ;--------------------------------------------------------------------------
 
-;--------------------------------------------------------------------------				    
-; THEME MODE
+					;--------------------------------------------------------------------------
 ;
-(add-to-list 'load-path "~/.emacs.d/plugins/colortheme")
-(require 'color-theme)
-(add-to-list 'custom-theme-load-path "~/.emacs.d/plugins/sublime-themes/themes")
-(load-theme 'wheatgrass t)
+; THEME MODE
+(use-package github-theme
+  :ensure t
+  :config
+  (load-theme 'github t))
 ;-------------------------------------------------------------------------- 
 
 
@@ -100,6 +93,17 @@
 ;(set-frame-font "DejaVu Sans Mono-12" t)
 (set-face-attribute 'default nil :height 140) ; nice tall window
 (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono"))					
+;--------------------------------------------------------------------------
+
+
+;--------------------------------------------------------------------------
+; FILL-COLUMN-INDICATOR (at Column 80)
+;
+ (use-package fill-column-indicator
+   :ensure t
+   :config
+   (setq fci-rule-column 80)
+   (add-hook 'prog-mode-hook 'fci-mode))
 ;--------------------------------------------------------------------------
 
 

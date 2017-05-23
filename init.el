@@ -15,14 +15,8 @@
 
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
-
-(when (< emacs-major-version 24)
-  (add-to-list 'package-archives
-	       '("gnu" . "http://elpa.gnu.org/packages/")))
-
 (add-to-list 'package-archives
              '("elpy" . "http://jorgenschaefer.github.io/packages/"))
-
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/"))
 ;--------------------------------------------------------------------------
@@ -49,7 +43,8 @@
 ;-------------------------------------------------------------------------- 
 ; PERSONAL INFORMATION
 (setf user-full-name "Jonathan Tow")
-(setf user-mail-address "jonathantow8@gmail.com")				;--------------------------------------------------------------------------
+(setf user-mail-address "jonathantow8@gmail.com")
+;--------------------------------------------------------------------------
 
 
 ;; ensure environment variables inside Emacs look the same as in my shell
