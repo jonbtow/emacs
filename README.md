@@ -1,6 +1,6 @@
 # emacs
 
-Emacs setup focused on C/C++ development.
+Basic Emacs Setup.
 
 # Install
 (OSX & Linux)
