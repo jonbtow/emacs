@@ -53,25 +53,31 @@
   (sr-speedbar-open))
 ;--------------------------------------------------------------------------
 
-
 ;--------------------------------------------------------------------------
 ; FLYSPELL MODE
 ;
-(setq-default ispell-program-name "aspell")
-(setq ispell-program-name "/usr/local/bin/aspell")
-(setq-default ispell-list-command "list")
-(add-hook 'message-mode-hook 'turn-on-flyspell)
-(add-hook 'text-mode-hook 'turn-on-flyspell)
-(add-hook 'markdown-mode-hook 'flyspell-mode)
-(add-hook 'org-mode-hook 'flyspell-mode)
-(add-hook 'LaTeX-mode-hook 'turn-on-flyspell)
+(use-package flyspell
+  :ensure t
+  :defer t
+  :init
+  (progn
+    (add-hook 'prog-mode-hook 'flyspell-prog-mode)
+    (add-hook 'text-mode-hook 'flyspell-mode)
+    (add-hook 'org-mode-hook 'flyspell-mode)
+    (add-hook 'markdown-mode-hook 'flyspell-mode)
+    (add-hook 'LaTeX-mode-hook 'turn-on-flyspell)
+    )
+  :config
+  ;; Sets flyspell correction to use two-finger mouse click
+  (define-key flyspell-mouse-map [down-mouse-3] #'flyspell-correct-word)
+  )
 ;--------------------------------------------------------------------------
 
 
 ;--------------------------------------------------------------------------
 ; AUTOPAIR
 ;
-(use-package autopair 
+(use-package autopair
   :ensure t
   :config
   (autopair-global-mode 1))
@@ -101,7 +107,7 @@
 ;
 (setq scheme-program-name   "/usr/local/bin/mit-scheme")
 (add-to-list 'load-path "~/.emacs.d/plugins/scheme")
-(defun load-xscheme () (require 'xscheme)) 
+(defun load-xscheme () (require 'xscheme))
 (add-hook 'scheme-mode-hook 'load-xscheme)
 (setq geiser-repl-skip-version-check-p t)
 (setq geiser-racket-binary "/Applications/Racket/bin/racket")
@@ -153,95 +159,55 @@
 
 
 ;--------------------------------------------------------------------------
-; ORG MODE SPICES
-;
-;; (eval-after-load "org"
-;;   '(progn
-;;      ;; Change .pdf association directly within the alist
-;;      (setcdr (assoc "\\.pdf\\'" org-file-apps) "skim %s")))
-;; (add-to-list 'load-path "~/.emacs.d/plugins/org/")
-;; (require 'ob-scheme)
-;; ; use bullets instead of asteriks.
-;; (require 'org-bullets)
-;; ; set preview latex to have a bigger font
-;; (set-default 'preview-scale-function 1.2)
-;; ; change org stars to bullets
-;; (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
-;; (require 'ox-latex)
-;; ; indent mode on
-;; (org-indent-mode 1)
+; ORG MODE 
 
-;; (unless (boundp 'org-latex-classes)
-;;   (setq org-latex-classes nil))
-;; (setq org-export-with-section-numbers nil)
-;; (setq org-latex-to-pdf-process (list "latexmk %f"))
-;; ; make formulas bigger in latex previews
-;; (setq org-format-latex-options (plist-put org-format-latex-options :scale 1.2))
-;; (defun do-org-show-all-inline-images ()
-;;   (interactive)
-;;   (org-display-inline-images t t))
-;; (global-set-key (kbd "C-c C-x C v")
-;;                 'do-org-show-all-inline-images)
-;; (let* ((variable-tuple
-;; 	(cond ((x-list-fonts "Source Sans Pro") '(:font "Source Sans Pro"))
-;; 	      ((x-list-fonts "Lucida Grande")   '(:font "Lucida Grande"))
-;; 	      ((x-list-fonts "Verdana")         '(:font "Verdana"))
-;; 	      ((x-family-fonts "Sans Serif")    '(:family "Sans Serif"))
-;; 	      (nil (warn "Cannot find a Sans Serif Font.  Install Source Sans Pro."))))
-;;        (base-font-color     (face-foreground 'default nil 'default))
-;;        (headline           `(:inherit default :weight bold :foreground ,base-font-color)))
-;;   (custom-theme-set-faces 'user
-;;                           `(org-level-8 ((t (,@headline ,@variable-tuple))))
-;;                           `(org-level-7 ((t (,@headline ,@variable-tuple))))
-;;                           `(org-level-6 ((t (,@headline ,@variable-tuple))))
-;;                           `(org-level-5 ((t (,@headline ,@variable-tuple))))
-;;                           `(org-level-4 ((t (,@headline ,@variable-tuple :height 1.1))))
-;;                           `(org-level-3 ((t (,@headline ,@variable-tuple :height 1.25))))
-;;                           `(org-level-2 ((t (,@headline ,@variable-tuple :height 1.5))))
-;;                           `(org-level-1 ((t (,@headline ,@variable-tuple :height 1.75))))
-;;                           `(org-document-title ((t (,@headline ,@variable-tuple :height 1.5 :underline nil))))))
-;  babel set up for languages
-;(org-babel-do-load-languages
-; 'org-babel-load-languages
-; '((R . t)
-;   (ditaa . t)
-;   (dot . t)
-;   (emacs-lisp . t)
-;   (gnuplot . t)
-;   (haskell . t)
-;   (latex . t) 
-;   (ocaml . t)
-;   (perl . t)
-;   (python . t)
-;   (ruby . t)
-;   (screen . t)
-;   (sh . t)
-;   (sql . t)
-;   (sqlite . t)))
-;(require 'ox-md)
-;(setq org-src-fontify-natively t)
-;--------------------------------------------------------------------------
-
-
-;--------------------------------------------------------------------------
-; PYTHON IDE SETUP               
-;
-(use-package elpy
-  :ensure t
-  :init
-;  (setq ipython-command "/Users/drseuss/anaconda/bin/ipython3")
-;  (setq elpy-rpc-python-command "/Users/drseuss/anaconda/bin/python3")
-;  (elpy-use-ipython "~/anaconda/bin/ipython3")
-;  (elpy-use-cpython "~/anaconda/bin/ipython3")
+(use-package org
+  :mode ("\\.org'" . org-mode)
+  :init (setq org-babel-safe-header-args nil)
   :config
-  (package-initialize)
-  (elpy-enable)
-  )
-;--------------------------------------------------------------------------
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((R . t)
+     (C . t)
+     (latex . t)
+     (awk . t)
+     (python . t)))
 
+  (setq org-babel-python-command "ipython"
+	org-export-with-section-numbers nil
+        org-export-with-toc nil
+        org-src-fontify-natively t
+        org-src-window-setup 'current-window
+        org-startup-folded 'showall
+        org-use-speed-commands t)
 
+  (add-hook 'org-mode-hook #'(lambda () (auto-fill-mode +1)))
+
+  (setenv "PATH" (concat "/usr/texbin:/Library/TeX/texbin:" (getenv "PATH")))
+  (setq exec-path (append '("/usr/texbin" "/Library/TeX/texbin") exec-path))
+
+  (use-package org-bullets
+    :ensure t
+    :commands (org-bullets-mode)
+    :init (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
+  (use-package ox-latex
+    :ensure t
+    :config
+    
+    (setq org-latex-pdf-process '("latexmk -gg -pdf -bibtex %f"))
+    (setq org-latex-caption-above nil)
+    (unless (boundp 'org-latex-packages-alist)
+      (setq org-latex-packages-alist nil))
+    (add-to-list 'org-latex-packages-alist '("" "microtype"))
+    (add-to-list 'org-latex-packages-alist '("l2tabu" "nag"))
+    (add-to-list 'org-latex-packages-alist '("" "lmodern")
+		 't))
+  )				;--------------------------------------------------------------------------
+
+  
 ;--------------------------------------------------------------------------
-; AUTO-COMPLETION 
+; AUTO-COMPLETION
 ;
 ; start auto-complete with emacs
 (use-package auto-complete
@@ -250,8 +216,9 @@
   (ac-config-default))
 ;--------------------------------------------------------------------------
 
+
 ;--------------------------------------------------------------------------
-; YASNIPPET 
+; YASNIPPET
 ;
 ; start yasnippet with emacs
 (use-package yasnippet
@@ -260,7 +227,6 @@
   :init
   (add-hook 'prog-mode-hook 'yas-minor-mode)
   (yas-global-mode 1))
-; let's define a function which initializes auto-complete-c-headers and gets called for c/c++ hooks
 (defun my:ac-c-header-init ()
   (require 'auto-complete-c-headers)
   (add-to-list 'ac-sources 'ac-source-c-headers)
@@ -292,7 +258,7 @@ rwin11/4.2.1/include"))
 ;-----------------
 ; IRONY-MODE
 ; (IF CLONED INSTALL VIA MELPA)
-; irony mode auto-completion backend 
+; irony mode auto-completion backend
 (use-package irony
   :ensure t
   :defer t
@@ -314,6 +280,36 @@ rwin11/4.2.1/include"))
 ;-----------------
 
 ;-----------------
+; RTAGS
+(use-package rtags
+  :ensure t
+  :config
+  (progn
+    ;; Start rtags upon entering a C/C++ file
+    (add-hook
+     'c-mode-common-hook
+     (lambda () (if (not (is-current-file-tramp))
+                    (rtags-start-process-unless-running))))
+    (add-hook
+     'c++-mode-common-hook
+     (lambda () (if (not (is-current-file-tramp))
+                    (rtags-start-process-unless-running))))
+    ;; Flycheck setup
+    (require 'flycheck-rtags)
+    (defun my-flycheck-rtags-setup ()
+      (flycheck-select-checker 'rtags)
+      ;; RTags creates more accurate overlays.
+      (setq-local flycheck-highlighting-mode nil)
+      (setq-local flycheck-check-syntax-automatically nil))
+    ;; c-mode-common-hook is also called by c++-mode
+    (add-hook 'c-mode-common-hook #'my-flycheck-rtags-setup)
+    ;; Keybindings
+    (rtags-enable-standard-keybindings c-mode-base-map "\C-cr")
+    )
+  )
+;-----------------
+
+;-----------------
 ; LINUX-C-STYLE
 (defun linux-c-mode ()
   (setq c-indent-level 8)
@@ -330,34 +326,26 @@ rwin11/4.2.1/include"))
 ;-----------------
 
 ;-----------------
-; C START UP TEMPLATE 
+; C/C++ START UP TEMPLATE 
 (eval-after-load 'autoinsert
   '(define-auto-insert '("\\.c\\'" . "C skeleton")
      '(
        "Short description: "
        "/**" \n
        " * "\n
-       " * Filename      : "      
+       " * @file    : "
        (file-name-nondirectory (buffer-file-name)) \n
-       " * Description   : "  \n
-       " * Author        : Jonathan Tow" \n
-       " * Created       : " (format-time-string "%A, %e %B %Y.") \n
-       " * Version       : " \n
-       " * Compatibility : " \n
-       " * Features that might be required by this lirbary: " \n
-       " * " \n       
-       " *               : None"\n
+       " * @brief   : "  \n
+       " * @author  : Jonathan Tow" \n
+       " * @version : " \n
        " * " \n
-       " * " \n
-       " * Commentary    : "\n
-       " * " \n
-       " * " \n
+       " * Commentary: "\n
        " * " \n
        " */" > \n \n
        "#include <stdio.h>" \n
        "#include <stdlib.h>" \n
        "#include <string.h>" \n
-       "#include <math.h>" \n \n       
+       "#include <math.h>" \n \n
        "#include \""
        (file-name-sans-extension
         (file-name-nondirectory (buffer-file-name)))
@@ -367,16 +355,76 @@ rwin11/4.2.1/include"))
         \n
        "return 0;" \n
        "}" str  \n)))
+;----------------- 
+(eval-after-load 'autoinsert
+  '(define-auto-insert '("\\.cpp\\'" . "C++ skeleton")
+     '(
+       "Short description: "
+       "/**" \n
+       " * "\n
+       " * @file     : "
+       (file-name-nondirectory (buffer-file-name)) \n
+       " * @brief    : "  \n
+       " * @author   : Jonathan Tow" \n
+       " * @version  : " \n
+       " * Commentary : "\n
+       " * " \n
+       " */" > \n \n
+       "#include \""
+       (file-name-sans-extension
+        (file-name-nondirectory (buffer-file-name)))
+       ".h\"" \n \n
+       "int main(int argc, char *argv[])" \n
+       "{" > \n \n
+       "return 0;" \n
+       "}" str \n)))
 ;-----------------
 
+
 ;--------------------------------------------------------------------------
 
 
 ;--------------------------------------------------------------------------
-; set column number mode
+; LATEX (AUCTEX)
+;
+
+(use-package auctex
+  :ensure t
+  :mode ("\\.tex\\'" . latex-mode)
+  :commands (latex-mode LaTeX-mode plain-tex-mode)
+  :init
+  (progn
+    (add-hook 'LaTeX-mode-hook #'LaTeX-preview-setup)
+    (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
+    (add-hook 'LaTeX-mode-hook #'flyspell-mode)
+    (add-hook 'LaTeX-mode-hook #'turn-on-reftex)
+    (setq TeX-auto-save t
+	  TeX-parse-self t
+	  TeX-save-query nil
+	  TeX-PDF-mode t)
+    ))
+; Use company-auctex
+(use-package company-auctex
+  :ensure t
+  :config
+  (company-auctex-init))
+;--------------------------------------------------------------------------
+
+
+;--------------------------------------------------------------------------
+; SQL
+;
+(use-package sql
+  :ensure t
+  :mode ("\\.sql" . sql-mode))
+;--------------------------------------------------------------------------
+
+
+;--------------------------------------------------------------------------
+; Set column number mode
 (setq column-number-mode t)
-;no more creating ".~" files (backup files)
-(setq make-backup-files nil)    
+; Back ups are placed in a  "~/.saves" directory
+(setq backup-directory-alist `(("." . "~/.saves")))
 ; Matches parentheses and such in every mode
 (show-paren-mode 1)
 ; Calender should start on

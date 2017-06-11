@@ -18,6 +18,8 @@
 (add-to-list 'package-archives
              '("elpy" . "http://jorgenschaefer.github.io/packages/"))
 (add-to-list 'package-archives
+             '("org" . "http://orgmode.org/elpa/"))
+(add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/"))
 ;--------------------------------------------------------------------------
 
@@ -38,7 +40,6 @@
 (load-library "keys")
 (load-library "modes")
 ;--------------------------------------------------------------------------
-
 
 ;-------------------------------------------------------------------------- 
 ; PERSONAL INFORMATION

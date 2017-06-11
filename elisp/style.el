@@ -29,7 +29,7 @@
 ;--------------------------------------------------------------------------
 ; INITIAL FRAME LOCATION
 ;
-(setq initial-frame-alist `((left . 250))) 
+(setq initial-frame-alist `((left . 150))) 
 (setq default-frame-alist (copy-alist initial-frame-alist))
 ;--------------------------------------------------------------------------
 
@@ -62,7 +62,7 @@
 ; SCREEN HEIGHT & WIDTH
 ;
 (add-to-list 'default-frame-alist  '(height . 59))
-(add-to-list 'default-frame-alist  '(width . 120))
+(add-to-list 'default-frame-alist  '(width . 130))
 ;--------------------------------------------------------------------------
 
 					;--------------------------------------------------------------------------
