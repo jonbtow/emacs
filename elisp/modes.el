@@ -160,7 +160,6 @@
 
 ;--------------------------------------------------------------------------
 ; ORG MODE 
-
 (use-package org
   :mode ("\\.org'" . org-mode)
   :init (setq org-babel-safe-header-args nil)
@@ -203,7 +202,8 @@
     (add-to-list 'org-latex-packages-alist '("l2tabu" "nag"))
     (add-to-list 'org-latex-packages-alist '("" "lmodern")
 		 't))
-  )				;--------------------------------------------------------------------------
+  )
+;--------------------------------------------------------------------------
 
   
 ;--------------------------------------------------------------------------
@@ -251,7 +251,6 @@ rwin11/4.2.1/include"))
 ;--------------------------------------------------------------------------
 ; C/C++ programming setup
 ;
-
 ; set LD_LIBRARY_PATH
 (setenv "LD_LIBRARY_PATH" "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/")
 
@@ -281,7 +280,7 @@ rwin11/4.2.1/include"))
 
 ;-----------------
 ; RTAGS
-(use-package rtags
+(use-package rtags			
   :ensure t
   :config
   (progn
@@ -380,14 +379,12 @@ rwin11/4.2.1/include"))
        "}" str \n)))
 ;-----------------
 
-
 ;--------------------------------------------------------------------------
 
 
 ;--------------------------------------------------------------------------
 ; LATEX (AUCTEX)
 ;
-
 (use-package auctex
   :ensure t
   :mode ("\\.tex\\'" . latex-mode)
