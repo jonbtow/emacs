@@ -4,10 +4,10 @@ Basic Emacs Setup.
 
 # Install
 (OSX & Linux)
-- Save your previous .emacs.d directory (recommended).
-- Download this emacs repository and rename it to **.emacs.d** (OSX e.g. `mv ~/Downloads/emacs-master ~/.emacs.d`).
-- Move this newly added **.emacs.d** directory to your home directory.
-- Load the emacs setup by calling the following code segment from your **.emacs** file.
+- Save your previous .emacs.d directory (recommended) under a new name (e.g. `.emacs.d-saved`)
+- Download this emacs repository and rename it to **.emacs.d** inside your home directory.
+  (OSX e.g. `mv ~/Downloads/emacs-master ~/.emacs.d`).
+- Load this emacs setup by calling the following code segment from within your **.emacs** file.
 
 ``` elisp 
 (load "~/.emacs.d/init.el")
