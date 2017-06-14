@@ -4,6 +4,21 @@
 ;
 ;;; Code:
 
+
+;--------------------------------------------------------------------------
+; Set column number mode
+(setq column-number-mode t)
+; Back ups are placed in a  "~/.saves" directory
+(setq backup-directory-alist `(("." . "~/.saves")))
+; Matches parentheses and such in every mode
+(show-paren-mode 1)
+; Calender should start on
+(setq calendar-week-start-day 1)
+; Turn off auto-save
+(setq auto-save-default nil)
+;--------------------------------------------------------------------------
+
+
 ;--------------------------------------------------------------------------
 ; IDO-MODE
 ;
@@ -201,7 +216,7 @@
     (add-to-list 'org-latex-packages-alist '("" "microtype"))
     (add-to-list 'org-latex-packages-alist '("l2tabu" "nag"))
     (add-to-list 'org-latex-packages-alist '("" "lmodern")
-		 't))
+		 't)))
   )
 ;--------------------------------------------------------------------------
 
@@ -414,20 +429,6 @@ rwin11/4.2.1/include"))
 (use-package sql
   :ensure t
   :mode ("\\.sql" . sql-mode))
-;--------------------------------------------------------------------------
-
-
-;--------------------------------------------------------------------------
-; Set column number mode
-(setq column-number-mode t)
-; Back ups are placed in a  "~/.saves" directory
-(setq backup-directory-alist `(("." . "~/.saves")))
-; Matches parentheses and such in every mode
-(show-paren-mode 1)
-; Calender should start on
-(setq calendar-week-start-day 1)
-; Turn off auto-save
-(setq auto-save-default nil)
 ;--------------------------------------------------------------------------
 
 
