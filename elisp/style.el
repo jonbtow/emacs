@@ -71,7 +71,7 @@
 (use-package github-theme
   :ensure t
   :config
-  (load-theme 'github t))
+  (load-theme 'spacemacs-dark t))
 ;-------------------------------------------------------------------------- 
 
 

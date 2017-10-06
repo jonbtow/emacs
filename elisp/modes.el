@@ -1,4 +1,5 @@
-;-------------------------------------------------------------------------- 
+
+					;-------------------------------------------------------------------------- 
 ; Jonathan Tow
 ; jonathantow8@gmail.com
 ;
@@ -288,6 +289,7 @@ rwin11/4.2.1/include"))
   :init
   (global-company-mode 1)
   (delete 'company-semantic company-backends))
+
 (use-package company-c-headers
   :init
   (add-to-list 'company-backends 'company-c-headers))
@@ -326,14 +328,14 @@ rwin11/4.2.1/include"))
 ;-----------------
 ; LINUX-C-STYLE
 (defun linux-c-mode ()
-  (setq c-indent-level 8)
+  (setq c-indent-level 4)
   (setq c-brace-imaginary-offset 0)
-  (setq c-brace-offset -8)
-  (setq c-argdecl-indent 8)
-  (setq c-label-offset -8)
-  (setq c-continued-statement-offset 8)
+  (setq c-brace-offset -4)
+  (setq c-argdecl-indent 4)
+  (setq c-label-offset -4)
+  (setq c-continued-statement-offset 4)
   (setq indent-tabs-mode nil)
-  (setq tab-width 8))
+  (setq tab-width 4))
 (add-hook 'c-mode-hook 'linux-c-mode)
 (add-hook 'c++-mode-hook 'linux-c-mode)
 (setq c-default-style "linux")
@@ -341,57 +343,33 @@ rwin11/4.2.1/include"))
 
 ;-----------------
 ; C/C++ START UP TEMPLATE 
-(eval-after-load 'autoinsert
-  '(define-auto-insert '("\\.c\\'" . "C skeleton")
-     '(
-       "Short description: "
-       "/**" \n
-       " * "\n
-       " * @file    : "
-       (file-name-nondirectory (buffer-file-name)) \n
-       " * @brief   : "  \n
-       " * @author  : Jonathan Tow" \n
-       " * @version : " \n
-       " * " \n
-       " * Commentary: "\n
-       " * " \n
-       " */" > \n \n
-       "#include <stdio.h>" \n
-       "#include <stdlib.h>" \n
-       "#include <string.h>" \n
-       "#include <math.h>" \n \n
-       "#include \""
-       (file-name-sans-extension
-        (file-name-nondirectory (buffer-file-name)))
-       ".h\"" \n \n
-       "int main(int argc, char *argv[])" \n
-       "{" > \n
-        \n
-       "return 0;" \n
-       "}" str  \n)))
+;
+(auto-insert-mode)
+(setq auto-insert-query nil)
+;----------------
+; C Template
+
 ;----------------- 
+; C++ Template
 (eval-after-load 'autoinsert
-  '(define-auto-insert '("\\.cpp\\'" . "C++ skeleton")
-     '(
-       "Short description: "
-       "/**" \n
-       " * "\n
-       " * @file     : "
-       (file-name-nondirectory (buffer-file-name)) \n
-       " * @brief    : "  \n
-       " * @author   : Jonathan Tow" \n
-       " * @version  : " \n
-       " * Commentary : "\n
-       " * " \n
-       " */" > \n \n
-       "#include \""
-       (file-name-sans-extension
-        (file-name-nondirectory (buffer-file-name)))
-       ".h\"" \n \n
-       "int main(int argc, char *argv[])" \n
-       "{" > \n \n
-       "return 0;" \n
-       "}" str \n)))
+  '(define-auto-insert
+     '("\\.\\(CC?\\|cc\\|cxx\\|cpp\\|c++\\)\\'" . "C++ skeleton")
+     '("Short description: "
+       "/*\n" 
+       "* file: " (file-name-nondirectory (buffer-file-name))
+       "\n* brief: " str \n
+       "* author: Jonathan Tow"\n
+       "*/" > \n \n
+       "#include <iostream>" \n 
+       "#include <vector>" \n
+       "#include <string>" \n
+       "#include <algorithm>" \n \n
+       "using namespace std;" \n \n
+       "int main(int argc, char **argv)\n"
+       "{\n"
+       > _ \n 
+       "return 0;\n"
+       "}" > \n)))
 ;-----------------
 
 ;--------------------------------------------------------------------------
