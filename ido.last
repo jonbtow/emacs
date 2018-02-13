@@ -1,0 +1,270 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/drseuss/Programming/Projects/Crypto/Crypto-Challenges/" . "Challenges1/")
+ ("/Users/drseuss/Programming/Projects/Crypto/Holder/static/" . "alert/")
+ ("/Users/drseuss/Programming/Projects/Crypto/Holder/templates/" . "alert/")
+ ("/Users/drseuss/Programming/Projects/Crypto/Holder/" . "alert/")
+ ("/Users/drseuss/Desktop/project/e_commerce/" . "cart/")
+ ("/Users/drseuss/Desktop/project/" . "e_commerce/")
+ ("/Users/drseuss/Programming/Projects/Crypto/" . "Holder/")
+ ("/Users/drseuss/Programming/Web/Personal_Page/_projects/Books/" . "Clean Code/")
+ ("/Users/drseuss/Programming/Web/Personal_Page/_layouts/" . "_site/")
+ ("/Users/drseuss/Programming/Web/Personal_Page/_includes/" . "_sections/")
+ ("/Users/drseuss/Programming/Web/TheAlgorithmHandBook/Crawling/1DescribingAlgorithms/" . "data/")
+ ("/Users/drseuss/Programming/Web/TheAlgorithmHandBook/Crawling/" . "CSS/")
+ ("/Users/drseuss/Programming/Web/TheAlgorithmHandBook/" . "Crawling/")
+ ("/Users/drseuss/Programming/Web/Personal_Page/_projects/" . "Books/")
+ ("/Users/drseuss/Programming/Web/Personal_Page/" . "_layouts/")
+ ("/Users/drseuss/Programming/Web/" . "Personal_Page/")
+ ("/Users/drseuss/Programming/MySites/Personal_Page/_includes/" . "_sections/")
+ ("/Users/drseuss/Desktop/Fall17/CSE 327 (Comp Vision)/FinalProject/UCF101/" . "annos/")
+ ("/Users/drseuss/Desktop/Fall17/CSE 327 (Comp Vision)/FinalProject/" . "UCF101/")
+ ("/Users/drseuss/Desktop/Fall17/CSE 327 (Comp Vision)/" . "FinalProject/")
+ ("/Users/drseuss/Desktop/Fall17/CSE 373 (Algorithms)/assignments/assignment5/" . "assignment5_code/")
+ ("/Users/drseuss/Desktop/Fall17/CSE 373 (Algorithms)/assignments/" . "assignment5/")
+ ("/Users/drseuss/Desktop/Fall17/CSE 373 (Algorithms)/" . "assignments/")
+ ("/Users/drseuss/Desktop/Fall17/" . "CSE 327 (Comp Vision)/")
+ ("/Users/drseuss/Programming/MySites/Personal_Page/" . "css/")
+ ("/Users/drseuss/Programming/MySites/" . "Personal_Page/")
+ ("/Users/drseuss/.emacs.d/" . "elisp/")
+ ("/Users/" . "drseuss/")
+ ("/Users/drseuss/Desktop/Fall '17/CSE 373 (Algorithms)/Algorithm Design Manual Exercises/3. Data Structures/" . "373-DS/")
+ ("/Users/drseuss/Desktop/Fall '17/CSE 327 (Comp Vision)/HW1/" . "scrap/")
+ ("/Users/drseuss/Desktop/Fall '17/CSE 327 (Comp Vision)/" . "HW1/")
+ ("/Users/drseuss/Desktop/Fall '17/CSE 373 (Algorithms)/Algorithm Design Manual Exercises/" . "3. Data Structures/")
+ ("/Users/drseuss/Desktop/Fall '17/CSE 373 (Algorithms)/" . "Algorithm Design Manual Exercises/")
+ ("/Users/drseuss/Desktop/Fall '17/" . "CSE 373 (Algorithms)/")
+ ("/Users/drseuss/Desktop/" . "desktop-save/")
+ ("/Users/drseuss/Programming/LanguagePractice/C++/" . "SudokuSolver/")
+ ("/Users/drseuss/Programming/LanguagePractice/" . "C++/")
+ ("/Users/drseuss/Programming/Projects/" . "Crypto/")
+ ("/Users/drseuss/Programming/ProblemSolving/" . "Codeforces/")
+ ("/Users/drseuss/Programming/" . "Web/")
+ ("/Users/drseuss/" . "Desktop/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/drseuss/.emacs.d/elisp/"
+ "/Users/drseuss/Programming/Projects/Crypto/Holder/alert/"
+ "/Users/drseuss/Programming/Projects/Crypto/Holder/static/alert/"
+ "/Users/drseuss/Programming/Projects/Crypto/Holder/templates/alert/"
+ "/Users/drseuss/Programming/Projects/Crypto/Holder/account/"
+ "/Users/drseuss/Programming/Projects/Crypto/Crypto-Challenges/Challenges1/"
+ "/Users/drseuss/Programming/Web/Personal_Page/_layouts/"
+ "/Users/drseuss/Programming/Web/Personal_Page/_projects/Books/Clean Code/"
+ "/Users/drseuss/Desktop/"
+ "/Users/drseuss/Programming/Projects/Crypto/Holder/"
+ "/Users/drseuss/Programming/Web/Personal_Page/_includes/_sections/"
+ "/Users/drseuss/Programming/Web/Personal_Page/"
+ "/Users/drseuss/Programming/Web/Personal_Page/css/"
+ "/Users/drseuss/Programming/Projects/Crypto/Holder/templates/base/"
+ "/Users/drseuss/Programming/Projects/Crypto/Holder/templates/registration/"
+ "/Users/drseuss/Programming/Projects/Crypto/Holder/templates/account/"
+ "/Users/drseuss/Programming/Projects/Crypto/Holder/holder/"
+ "/Users/drseuss/Programming/Web/Personal_Page/_includes/_base/"
+ "/Users/drseuss/Programming/Web/Personal_Page/_projects/Books/"
+ "/Users/drseuss/Programming/Projects/Crypto/Holder/static/css/"
+ "/Users/drseuss/Programming/Projects/Crypto/Holder/templates/"
+ "/Users/drseuss/Desktop/project/e_commerce/cart/"
+ "/Users/drseuss/Programming/Projects/Crypto/hold-alert/"
+ "/Users/drseuss/Programming/Projects/Crypto/hodl-alert/"
+ "/Users/drseuss/Programming/Projects/Crypto/"
+ "/Users/drseuss/Programming/Web/Personal_Page/_pages/"
+ "/Users/drseuss/Programming/Web/Personal_Page/_plugins/"
+ "/Users/drseuss/Programming/Web/TheAlgorithmHandBook/Crawling/CSS/"
+ "/Users/drseuss/Programming/Web/TheAlgorithmHandBook/Crawling/1DescribingAlgorithms/"
+ "/Users/drseuss/Programming/MySites/Personal_Page/css/"
+ "/Users/drseuss/Programming/MySites/Personal_Page/_includes/_sections/"
+ "/Users/drseuss/Programming/MySites/Personal_Page/_includes/_base/"
+ "/Users/drseuss/Desktop/Fall17/CSE 327 (Comp Vision)/FinalProject/UCF101/"
+ "/Users/drseuss/Desktop/Fall17/CSE 327 (Comp Vision)/FinalProject/UCF101/annos/"
+ "/Users/drseuss/Desktop/Fall17/CSE 373 (Algorithms)/assignments/assignment5/assignment5_code/"
+ "/Users/drseuss/Programming/MySites/Personal_Page/_layouts/"
+ "/Users/"
+ "/Users/drseuss/Programming/ProblemSolving/Codeforces/"
+ "/Users/drseuss/Desktop/Fall '17/CSE 373 (Algorithms)/Algorithm Design Manual Exercises/3. Data Structures/373-DS/"
+ "/Users/drseuss/Desktop/Fall '17/CSE 327 (Comp Vision)/HW1/scrap/"
+ "/Users/drseuss/Desktop/Fall '17/CSE 373 (Algorithms)/Algorithm Design Manual Exercises/3. Data Structures/"
+ "/Users/drseuss/Programming/LanguagePractice/C++/SudokuSolver/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "modes.el"
+ "forms.py"
+ "urls.py"
+ "alert.js"
+ "pricealert_add.html"
+ "challenges.cpp"
+ "note.html"
+ "6-objects-and-data-structures.md"
+ "lave.org"
+ "track.org"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/drseuss/Desktop/desktop-save/" (23155 59692 0 0) "../" "./")
+
+ ("/Users/drseuss/Desktop/" (23155 59695 0 0) "Untitled1.ipynb" "Untitled.ipynb" "Thumbs.db" "The Little Schemer 4th Ed.pdf" "Structure and Interpretation of Computer Programs.pdf" "Spring18/" "Solution-Manual-Introduction-to-the-Theory-of-Computation-Sipser - Page 37.pdf" "Screen Shot 2018-01-27 at 4.13.11 PM.png" "Screen Shot 2018-01-22 at 11.30.49 AM.png" "Screen Shot 2018-01-19 at 7.32.49 PM.png" "Screen Shot 2018-01-14 at 8.51.13 PM.png" "Screen Shot 2018-01-11 at 3.22.42 PM.png" "Screen Shot 2018-01-09 at 11.11.29 PM.png" "Screen Shot 2017-10-12 at 10.08.04 PM.png" "Screen Shot 2017-09-14 at 12.15.55 AM.png" "scrap.py" "scrap.org" "Ramesh Jain, Rangachar Kasturi, Brian G. Schunck Machine vision.pdf" "Python Essential Reference (4th).pdf" "project/" "Programming alias" "profit_calc.py" "prac.cpp" "MachineLearning alias" "Logical Chess: Move By Move (Irving Chernev).pdf" "Logic Pro X 10.3.0.dmg" "Life/" "lave.org" "Jonathan_Tow_Lease_Signing.jpeg" "Fall17/" "Effective.Java.2nd.Edition.May.2008.3000th.Release.pdf" "Education alias" "Discrete Mathematics with Applications - Epp.pdf" "desktop-save/" "CSE305HomeWork3.pdf" "cpumemory.pdf" "Computer Network-Top Down Approach.pdf" "Calculus, 10th Ed - Larson, Edwards.pdf" "Bobs.Burgers.S03E02.HDTV.x264-LOL.mp4" ".Trash/" ".swp" ".swo" ".subversion/" ".ssh/" ".serverauth.303" ".rnd" ".predictive/" ".oh-my-zsh/" ".matlab/" ".localized" ".ipynb_checkpoints/" ".idea/" ".gitmodules" ".gitignore" ".gitconfig" ".git/" ".fontconfig/" ".emacs~" ".emacs.save.3" ".emacs.save.2" ".emacs.save.1" ".emacs.save" ".emacs.d/" ".emacs" ".DS_Store" ".dropbox/" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".bash_profile" ".bash_history" ".android/" ".Ableton Live 9 Suite 19-58-36-138_updated.app/" ".#shots.txt" ".#scrap.py" ".#profit_calc.py" ".#LectureIV.txt" ".#lecture4.org" "$RECYCLE.BIN/" "../" "./")
+
+ ("/Users/drseuss/Desktop/.Ableton Live 9 Suite 19-58-36-138_updated.app/" (22199 32513 0 0) "Contents/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/" (23155 59654 0 0) "Sites/" "Qt/" "Public/" "Programming/" "Pictures/" "Org/" "Music/" "Movies/" "Library/" "Education/" "Downloads/" "Documents/" "Desktop/" "bin/" "Applications/" "anaconda3/" ".zshrc~" ".zshrc.save" ".zshrc.backup" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zprofile~" ".zprofile.save" ".zprofile.pysave" ".zprofile" ".zcompdump-JonWot-5.2" ".zcompdump-JonWot-5.0.8" ".zcompdump-JonWot-5.0.5" ".zcompdump-Dr Seuss’s MacBook Pro-5.0.5" ".zcompdump-Dr Seuss’s MacBook Pro-5.0.2" ".Xauthority" ".wireshark-etc/" ".wireshark/" ".wine/" ".vscode/" ".viminfo" ".vim/" ".v8flags.3.14.5.9.root.json" ".v8flags.3.14.5.9.drseuss.json" ".Trash/" ".torch/" ".templateengine/" ".swp" ".swo" ".swn" ".swm" ".subversion/" ".ssh/" ".sqlite_history" ".spyder2-py3/" ".spyder2/" ".sh_history" ".ServiceHub/" ".serverauth.303" ".scala_history" ".saves/" ".sage/" ".rstudio-desktop/" ".rodeorc" ".rodeoprofile" ".rnd" ".Rhistory" ".Rapp.history" ".pyxbld/" ".python_history" ".pip/" ".pencil/" ".oracle_jre_usage/" ".oh-my-zsh/" ".nuget/" ".npm/" ".newsrc-dribble" ".mysql_history" ".mono/" ".matplotlib/" ".matlab/" ".local/" ".lldb/" ".lesshst" ".jupyter/" ".ipython/" ".ipynb_checkpoints/" ".ido.last~" ".idlerc/" ".IdentityService/" ".IdeaIC15/" ".IdeaIC14/" ".hgignore_global" ".guile_history" ".gsutil/" ".gradle/" ".gnuplot_history" ".gitmodules" ".gitignore_global" ".gitignore" ".gitconfig" ".git/" ".ghc/" ".gervill/" ".gem/" ".fontconfig/" ".emacs~" ".emacs.save.9" ".emacs.save.8" ".emacs.save" ".emacs.d/" ".emacs" ".DS_Store" ".dropbox/" ".designer/" ".cups/" ".continuum/" ".config/" ".condarc" ".conda/" ".CocosCreator/" ".cocos/" ".CFUserTextEncoding" ".cache/" ".bundle/" ".beaker/" ".bash_sessions/" ".bash_profile~" ".bash_profile-anaconda3.bak" ".bash_profile-anaconda.bak" ".bash_profile" ".bash_history" ".atom/" ".astropy/" ".android/" ".anaconda/" ".#.ido.last" "../" "./")
+
+ ("/Users/drseuss/.emacs.d/elisp/" (23155 59652 0 0) "style.el" "modes.el" "keys.el" "../" "./")
+
+ ("/Users/drseuss/Programming/Web/Personal_Page/_projects/Books/Clean Code/" (23155 56786 0 0) "clean-code.md" "9-unit-tests.md" "7-error-handling.md" "6-objects-and-data-structures.md" "5-formatting.md" "4-comments.md" "3-functions.md" "2-meaningful-names.md" "10-classes.md" "1-clean-code.md" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/Projects/Crypto/Holder/alert/" (23155 57269 0 0) "views.py" "urls.py" "tests.py" "models.py" "migrations/" "forms.py" "apps.py" "admin.py" "__pycache__/" "__init__.py" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/.emacs.d/" (23135 1382 0 0) "url/" "snippets/" "README.md" "plugins/" "irony/" "init.el" "ido.last" "eshell/" "elpa/" "elisp/" "auto-save-list/" "ac-comphist.dat" ".git/" ".#ido.last" "../" "./")
+
+ ("/Users/drseuss/Programming/Projects/Crypto/Holder/templates/alert/" (23155 55530 0 0) "pricealert_list.html" "pricealert_create.html" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/Projects/Crypto/Holder/static/" (23155 55280 0 0) "css/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/Projects/Crypto/Holder/static/alert/" (23155 55007 0 0) "../" "./")
+
+ ("/Users/drseuss/Programming/Projects/Crypto/Crypto-Challenges/Challenges1/" (23155 19687 0 0) "challenges.cpp" "../" "./")
+
+ ("/Users/drseuss/Programming/Projects/Crypto/Holder/account/" (23155 53228 0 0) "views.py" "urls.py" "tests.py" "models.py" "migrations/" "forms.py" "apps.py" "admin.py" "__pycache__/" "__init__.py" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/Projects/Crypto/Crypto-Challenges/" (23153 31795 0 0) "Challenges1/" "../" "./")
+
+ ("/Users/drseuss/Programming/Projects/Crypto/" (23153 31781 0 0) "Holder/" "hold-alert/" "Crypto-Challenges/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/Web/Personal_Page/_layouts/" (23151 60275 0 0) "project.html" "post.html" "page.html" "note.html" "_site/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/Projects/Crypto/Holder/static/css/" (23150 37719 0 0) "main.css" "../" "./")
+
+ ("/Users/drseuss/Programming/Projects/Crypto/Holder/holder/" (23150 48138 0 0) "wsgi.py" "urls.py" "settings.py" "__pycache__/" "__init__.py" "../" "./")
+
+ ("/Users/drseuss/Programming/Projects/Crypto/Holder/" (23150 47657 0 0) "track.org" "templates/" "static/" "populate_db.py" "manage.py" "holder-alert.py" "holder/" "alert/" "account/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/Projects/Crypto/Holder/templates/account/" (23150 27818 0 0) "register.html" "../" "./")
+
+ ("/Users/drseuss/Programming/Projects/Crypto/Holder/templates/registration/" (23150 27812 0 0) "login.html" "../" "./")
+
+ ("/Users/drseuss/Programming/Projects/Crypto/Holder/templates/base/" (23148 11454 0 0) "navbar.html" "footer.html" "base.html" "../" "./")
+
+ ("/Users/drseuss/Programming/Web/Personal_Page/css/" (23148 64755 0 0) "syntax.css" "main.css" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/Web/Personal_Page/_includes/_sections/" (23148 62849 0 0) "projects.html" "blog.html" "about.html" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/Web/Personal_Page/_includes/_base/" (23146 48536 0 0) "nav.html" "head.html" "footer.html" "../" "./")
+
+ ("/Users/drseuss/Programming/Projects/Crypto/Holder/templates/" (23146 53637 0 0) "registration/" "base/" "alert/" "account/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/Web/Personal_Page/" (23125 56145 0 0) "README.md" "pushSite.py" "javascript/" "index.html" "gitignore" "Gemfile.lock" "Gemfile" "feed.xml" "data/" "css/" "_site/" "_sass/" "_projects/" "_posts/" "_plugins/" "_layouts/" "_includes/" "_config.yml" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/Projects/Crypto/hold-alert/" (23138 45458 0 0) "my_holds.pickle" "holder-alert.py" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Desktop/project/e_commerce/cart/" (23128 36529 0 0) "views.py" "urls.py" "tests.py" "models.py" "migrations/" "cart.py" "apps.py" "admin.py" "__pycache__/" "__init__.py" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Desktop/project/e_commerce/" (23083 26966 0 0) "templates/" "static/" "manage.py" "items/" "generated_models.py" "e_commerce.sql" "e_commerce/" "checkout/" "cart/" "accounts/" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Desktop/project/" (23089 49080 0 0) "tracker.org" "project-documentation.pdf" "ec_env/" "e_commerce/" "documentation/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/Projects/Crypto/hodl-alert/" (23117 29199 0 0) "hodl-alert.py" "../" "./")
+
+ ("/Users/drseuss/Programming/Projects/" (23116 40547 0 0) "Machine Learning/" "Crypto/" "Apps/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/Web/Personal_Page/_projects/" (23115 29084 0 0) "Books/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/Web/Personal_Page/_projects/Books/" (23115 30457 0 0) "Clean Code/" "books.md" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/Web/Personal_Page/_plugins/" (23115 18631 0 0) ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/Web/Personal_Page/_layouts/_site/" (23108 7303 0 0) "project.html" "post.html" "page.html" "../" "./")
+
+ ("/Users/drseuss/Programming/Web/Personal_Page/_pages/" (23115 18322 0 0) "lz.html" "../" "./")
+
+ ("/Users/drseuss/Programming/Web/Personal_Page/_includes/" (23113 21315 0 0) "_sections/" "_base/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/Web/TheAlgorithmHandBook/Crawling/CSS/" (22461 51896 0 0) "org-style.css" "../" "./")
+
+ ("/Users/drseuss/Programming/Web/TheAlgorithmHandBook/Crawling/1DescribingAlgorithms/data/" (22365 48349 0 0) "thetanotation.png" "summary.png" "recur.png" "lineseparator.png" "growth_chart.png" "fact.png" "BigOmega.png" "BigO.png" "BE/" "array-ex.png" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/Web/TheAlgorithmHandBook/Crawling/1DescribingAlgorithms/" (22817 24148 0 0) "data/" "1DescribingAlgorithms.org" "1DescribingAlgorithms.html" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/Web/TheAlgorithmHandBook/Crawling/" (22817 24094 0 0) "Prelude/" "Home/" "CSS/" "Appendix/" "3SimpleDataStructures/" "2SortingAndSearching/" "1DescribingAlgorithms/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/Web/TheAlgorithmHandBook/" (22817 20982 0 0) "Walking/" "Running/" "Crawling/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/Web/" (23098 55917 0 0) "TheAlgorithmHandBook/" "Personal_Page/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/" (23114 603 0 0) "Web/" "Projects/" "Libraries/" "Language_Practice/" "Competitive/" ".recommenders/" ".metadata/" ".ipynb_checkpoints/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/MySites/Personal_Page/css/" (23108 9677 0 0) "main.css" "../" "./")
+
+ ("/Users/drseuss/Programming/MySites/Personal_Page/" (23113 21508 0 0) "README.md" "pushSite.py" "javascript/" "index.html" "gitignore" "Gemfile" "feed.xml" "data/" "css/" "_site/" "_sass/" "_projects/" "_posts/" "_layouts/" "_includes/" "_config.yml" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/MySites/Personal_Page/_includes/_sections/" (23113 21510 0 0) "projects.html" "blog.html" "about.html" ".DS_Store" ".#projects.html" ".#blog.html" "../" "./")
+
+ ("/Users/drseuss/Programming/ProblemSolving/Codeforces/" (23112 48078 0 0) "stats.py" "D_Queue.cpp" "CMakeLists.txt" "C_Registration.cpp" "B_Worms.cpp" "B_Spreadsheets.cpp" "B_SortTheArray.cpp" "B_Sale.cpp" "b_sa" "b_s" "b_pt" "B_PrisonTransfer.cpp" "B_PresentFromLena.c" "B_Parade.cpp" "B_LuxuriousHouses.cpp" "B_Lecture.cpp" "b_l" "B_Inbox.cpp" "B_IlyaAndQueries.cpp" "b_i" "b_gr" "B_GameOfRobots.cpp" "B_DYZString.cpp" "b_dy" "B_Chocolate.cpp" "b_c" "B_Buttons.c" "B_BlownGarland.cpp" "b_bg" "B_Bakery.cpp" "B_AntonAndDigits.cpp" "B_Anatoly.cpp" "b_an" "A_Word.cpp" "A_WayTooLongWords.c" "A_Watermelon.c" "A_VasyaTheHipster.cpp" "A_VanyaAndFence.c" "A_ValeraAndPlates.cpp" "A_Vacations.cpp" "a_va" "a_v" "A_UltraFastMathematician.c" "A_Translation.c" "A_Team.c" "A_StringTask.c" "A_Presents.c" "A_PetyaAndStrings.c" "A_Pangram.cpp" "a_p" "a_nm" "A_NightAtMuseum.cpp" "a_mn" "A_MishkaAndGame.c" "A_MagicNumber.cpp" "a_lz" "A_LuckyDivision.c" "a_lp" "A_LittlePony.cpp" "A_LittleElephants.cpp" "A_LifeWithoutZeros.cpp" "A_Laptops.cpp" "a_ks" "A_Keyboard.cpp" "A_k-String.cpp" "A_Jzzhu.cpp" "a_j" "A_IWannaBeTheGuy.cpp" "a_i" "A_Holidays.cpp" "A_HolidayOfEquality.cpp" "A_HelpfulMaths.c" "A_GoodContest.cpp" "a_gc" "A_FreeCash.cpp" "A_Football.cpp" "a_fg" "a_fd" "A_FairGame.cpp" "A_FaceDetection.cpp" "A_Elections.c" "a_el" "A_DuffMeat.cpp" "A_Dragons.cpp" "A_DoubleCola.c" "A_DoubleCola .cpp" "A_Coder.cpp" "a_cl" "A_CircleLine.cpp" "A_CinemaLine.cpp" "A_ChewbaccaAndNumbers.c" "A_ChatRoom.c" "a_cb" "A_CapsLock.c" "A_CandyBags.cpp" "a_c" "A_BusinessTrip.c" "A_BoyOrGirl.c" "A_BeautifulMatrix.cpp" "A_BearAndBigBrother.cpp" "A_Bachgold.cpp" "a_bab" "A_AryaAndBryan.cpp" "A_AmusingJoke.cpp" "A_Again25.cpp" "a_ab" "a_25" "a.out" ".vscode/" ".idea/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Desktop/Fall17/CSE 373 (Algorithms)/assignments/assignment5/assignment5_code/" (23098 2286 0 0) "string_match.cpp" "sm" "ls" "longest_substring.cpp" "lcs.cpp" "lcs" "denom.py" "breakline.py" "../" "./")
+
+ ("/Users/drseuss/Programming/MySites/Personal_Page/_includes/" (23113 21315 0 0) "_sections/" "_base/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/MySites/Personal_Page/_includes/_base/" (23113 21157 0 0) "nav.html" "head.html" "footer.html" "../" "./")
+
+ ("/Users/drseuss/Programming/MySites/Personal_Page/_layouts/" (23108 9676 0 0) "project.html" "post.html" "page.html" "_site/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/MySites/" (23098 55917 0 0) "TheAlgorithmHandBook/" "Personal_Page/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Desktop/Fall17/CSE 327 (Comp Vision)/FinalProject/UCF101/" (23096 50847 0 0) "vgg16_relu6/" "images_class1/" "extract_vgg16_relu6.py" "annos/" ".ipynb_checkpoints/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Desktop/Fall17/CSE 327 (Comp Vision)/FinalProject/UCF101/annos/" (23055 13966 0 0) "videos_labels_subsets.txt" "actions.txt" "../" "./")
+
+ ("/Users/drseuss/Desktop/Fall17/CSE 327 (Comp Vision)/FinalProject/" (23096 44869 0 0) "UCF101/" "Final_Project.ipynb" "documentation/" ".ipynb_checkpoints/" ".idea/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Desktop/Fall17/CSE 327 (Comp Vision)/" (23086 58193 0 0) "Introductory Techniques for 3-D Computer Vision (1998).pdf" "Image Acquistion.pdf" "HW4/" "HW3/" "HW2/" "HW1/" "FinalProject/" "Computer Vision (Szeliski).pdf" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Desktop/Fall17/CSE 373 (Algorithms)/assignments/assignment5/" (23054 32023 0 0) "assignment5_tex/" "assignment5_code/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Desktop/Fall17/CSE 373 (Algorithms)/assignments/" (23085 43775 0 0) "assignment5/" "assignment4/" "assignment3_tex/" "assignment2/" "assignment1_tex/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Desktop/Fall17/CSE 373 (Algorithms)/" (23050 45617 0 0) "Skiena.-.TheAlgorithmDesignManual.pdf" "midterm review questions.pdf" "key3.pdf" "IntroToAlgorithms.pdf" "assignments/" "Algorithm Design Manual Exercises/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Desktop/Fall17/" (23036 11672 0 0) "CSE305/" "CSE 390 (Prob)/" "CSE 373 (Algorithms)/" "CSE 327 (Comp Vision)/" "CSE 312 (Ethics)/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/MySites/Personal_Page/_includes/_skeleton/" (22999 62045 0 0) "nav.html" "head.html" "footer.html" "../" "./")
+
+ ("/Users/drseuss/Desktop/Fall '17/CSE 373 (Algorithms)/Algorithm Design Manual Exercises/3. Data Structures/373-DS/" (22997 41373 0 0) "valgrind.sh" "tree.h" "tree.c" "main.c" "list.h" "list.c" "graph.c" "grap.h" "dict.h" "dict.c" "CMakeLists.txt.user" "CMakeLists.txt" "cmake-build-debug/" ".idea/" ".gitignore" ".DS_Store" ".#graph.c" "../" "./")
+
+ ("/Users/" (22830 29385 0 0) "Shared/" "drseuss/" ".localized" "../" "./")
+
+ ("/Users/drseuss/Desktop/Fall '17/" (22997 31259 0 0) "CSE 390 (Prob)/" "CSE 373 (Algorithms)/" "CSE 327 (Comp Vision)/" "CSE 312 (Ethics)/" "CSE 305 (Database)/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/LanguagePractice/C++/SudokuSolver/" (22969 33098 0 0) "Solver/" "build-Solver-Qt_5_9-Default/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Desktop/Fall '17/CSE 327 (Comp Vision)/HW1/scrap/" (22977 57435 0 0) "scrap.py" ".ipynb_checkpoints/" ".idea/" "../" "./")
+
+ ("/Users/drseuss/Desktop/Fall '17/CSE 373 (Algorithms)/Algorithm Design Manual Exercises/3. Data Structures/" (22977 51440 0 0) "build-373-DS-Qt_5_9-Default/" "373-DS/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Desktop/Fall '17/CSE 373 (Algorithms)/" (22980 23182 0 0) "Skiena.-.TheAlgorithmDesignManual.pdf" "IntroToAlgorithms.pdf" "assignments/" "Algorithm Design Manual Exercises/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Desktop/Fall '17/CSE 327 (Comp Vision)/HW1/" (22970 2459 0 0) "snow.jpg" "scrap/" "road_noise.bmp" "road.bmp" "Readme.txt" "mandrill_noise.bmp" "mandrill.bmp" "lena_noise.bmp" "lena.bmp" "HW1.pdf" "HW1.ipynb" "building.bmp" "barbara_noise.bmp" "barbara.bmp" ".ipynb_checkpoints/" "../" "./")
+
+ ("/Users/drseuss/Desktop/Fall '17/CSE 327 (Comp Vision)/" (22969 46774 0 0) "Image Acquistion.pdf" "HW1/" "Computer Vision (Szeliski).pdf" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/.emacs.d/auto-save-list/" (22968 44508 0 0) ".saves-99635-JonWot.local~" ".saves-760-JonWot.local~" ".saves-58660-JonWot.local~" ".saves-43666-JonWot.local~" ".saves-43637-JonWot.local~" ".saves-43544-JonWot.local~" ".saves-43527-JonWot.local~" ".saves-43496-JonWot.local~" ".saves-43345-JonWot.local~" ".saves-39511-JonWot.local~" ".saves-38647-JonWot.local~" ".saves-36812-JonWot.local~" ".saves-3592-JonWot.local~" ".saves-356-JonWot.local~" ".saves-330-JonWot.local~" ".saves-328-JonWot.local~" ".saves-327-JonWot.local~" ".saves-325-JonWot.local~" ".saves-324-JonWot.local~" ".saves-322-JonWot.local~" ".saves-321-JonWot.local~" ".saves-318-JonWot.local~" ".saves-317-JonWot.local~" ".saves-312-JonWot.local~" ".saves-3058-JonWot.local~" ".saves-302-JonWot.local~" ".saves-29389-JonWot.local~" ".saves-29256-JonWot.local~" ".saves-27283-JonWot.local~" ".saves-24205-JonWot.local~" ".saves-24117-JonWot.local~" ".saves-24071-JonWot.local~" ".saves-24019-JonWot.local~" ".saves-23910-JonWot.local~" ".saves-1807-JonWot.local~" ".saves-13224-JonWot.local~" ".saves-11197-JonWot.local~" ".saves-10124-ool-457ce786.dyn.optonline.net~" "../" "./")
+
+ ("/Users/drseuss/Desktop/Fall '17/CSE 373 (Algorithms)/Algorithm Design Manual Exercises/" (22872 25478 0 0) "3. Data Structures/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/LanguagePractice/C++/" (22964 15354 0 0) "SudokuSolver/" "C++_Primer_Exercises/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/LanguagePractice/" (22843 33144 0 0) "C++/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/Projects/Games/" (22894 40605 0 0) "tic-tac-toe/" "cocos2d/" "Bomb-Bomb/" ".DS_Store" "../" "./")
+
+ ("/Users/drseuss/Programming/ProblemSolving/" (22814 30262 0 0) "Timus/" "SPOJ/" "ProjectEuler/" "Practice/" "CTCI/" "Codeforces/" ".DS_Store" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

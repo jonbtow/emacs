@@ -1,0 +1,64 @@
+((("APPLICATION_SETTINGS" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("request" .
+   [1 0 0 0 0 0 0])
+  ("stripe_checkout_total" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("accounts" .
+   [1 0 0 0 0 0 0 0])
+  ("Customer" .
+   [1 0 0 0 0 0 0 0])
+  ("CartItem" .
+   [1 0 0 0 0 0 0 0])
+  ("cart_items" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("init_graph" .
+   [0 0 0 0 0 1 0 0 0 0])
+  ("endl" .
+   [2 0 0 0])
+  ("progn" .
+   [1 0 0 0 0])
+  ("elpy" .
+   [1 0 0 0])
+  ("with" .
+   [0 0 0 1])
+  ("inhibit-splash-screen" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("inhibit-startup-screen" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("json" .
+   [1 0 0 0])
+  ("aw" .
+   [1 0])
+  ("url" .
+   [2 0 0])
+  ("city" .
+   [2 0 0 0])
+  ("use-package" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  (":init" .
+   [1 0 0 0 0])
+  (":ensure" .
+   [1 0 0 0 0 0 0])
+  (":config" .
+   [1 0 0 0 0 0 0])
+  ("undo-tree" .
+   [1 0 0 0 0 0 0 0 0])
+  ("init" .
+   [1 0 0 0])
+  ("inhibit-quit" .
+   [0 0 0 0 0 0 0 1 0 0 0 0])
+  ("inhibit-startup-message" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("nil" .
+   [3 0 0])
+  ("add-to-list" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("def" .
+   [1 0 0])
+  ("min_moves" .
+   [6 0 0 0 0 0 0 0 0])
+  ("destroy_list" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("head" .
+   [1 0 0 0])))
