@@ -1,5 +1,4 @@
-
-					;-------------------------------------------------------------------------- 
+				      ;-------------------------------------------------------------------------- 
 ; Jonathan Tow
 ; jonathantow8@gmail.com
 ;
@@ -17,6 +16,12 @@
 (setq calendar-week-start-day 1)
 ; Turn off auto-save
 (setq auto-save-default nil)
+; Turn off bell
+(setq ring-bell-function 'ignore)
+; Turn on desktop save to save sessions
+(desktop-save-mode 1)
+;; Switch typing yes or no to just y or n.
+(fset 'yes-or-no-p 'y-or-n-p)
 ;--------------------------------------------------------------------------
 
 
@@ -40,6 +45,38 @@
 
 
 ;--------------------------------------------------------------------------
+; MAGIT
+;
+(use-package magit
+  :ensure t
+  :config
+  (global-set-key (kbd "C-x g") 'magit-status))
+
+;--------------------------------------------------------------------------
+
+
+;--------------------------------------------------------------------------
+; E-SHELL
+;
+(defun my-eshell-prompt ()
+  "Highlight eshell pwd and prompt separately."
+  (mapconcat
+   (lambda (list)
+     (propertize (car list)
+                 'read-only      t
+                 'font-lock-face (cdr list)
+                 'front-sticky   '(font-lock-face read-only)
+                 'rear-nonsticky '(font-lock-face read-only)))
+   `((,(abbreviate-file-name (eshell/pwd)) :foreground "#FF78C4")
+     (,(if (zerop (user-uid)) " # " " $ ") :foreground "green"))
+   ""))
+
+(setq eshell-highlight-prompt nil
+      eshell-prompt-function  #'my-eshell-prompt)
+;--------------------------------------------------------------------------
+
+
+;--------------------------------------------------------------------------
 ; UNDO-TREE
 ;
 (use-package undo-tree
@@ -50,6 +87,15 @@
   (global-set-key (kbd "C-S-z") 'redo)
   :config
   (global-undo-tree-mode))
+;--------------------------------------------------------------------------
+
+					;--------------------------------------------------------------------------
+; SMOOTH SCROLLING SETUP 
+;
+(use-package smooth-scroll
+  :config
+  (setq smooth-scroll/vscroll-step-size 5)
+  (smooth-scroll-mode 1))
 ;--------------------------------------------------------------------------
 
 
@@ -68,6 +114,7 @@
   :config
   (sr-speedbar-open))
 ;--------------------------------------------------------------------------
+
 
 ;--------------------------------------------------------------------------
 ; FLYSPELL MODE
@@ -204,21 +251,7 @@
   (use-package org-bullets
     :ensure t
     :commands (org-bullets-mode)
-    :init (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
-
-  (use-package ox-latex
-    :ensure t
-    :config
-    
-    (setq org-latex-pdf-process '("latexmk -gg -pdf -bibtex %f"))
-    (setq org-latex-caption-above nil)
-    (unless (boundp 'org-latex-packages-alist)
-      (setq org-latex-packages-alist nil))
-    (add-to-list 'org-latex-packages-alist '("" "microtype"))
-    (add-to-list 'org-latex-packages-alist '("l2tabu" "nag"))
-    (add-to-list 'org-latex-packages-alist '("" "lmodern")
-		 't)))
-  )
+    :init (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))))
 ;--------------------------------------------------------------------------
 
   
@@ -276,7 +309,6 @@ rwin11/4.2.1/include"))
 ; irony mode auto-completion backend
 (use-package irony
   :ensure t
-  :defer t
   :init
   (add-hook 'c++-mode-hook 'irony-mode)
   (add-hook 'c-mode-hook 'irony-mode)
